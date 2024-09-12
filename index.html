@@ -1,100 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hexatronic Support Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #fff; /* White background for the whole page */
-        }
-        .container {
-            padding: 20px;
-            max-width: 600px;
-            width: 100%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background: hsl(0, 0%, 98%);
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        h1 {
-            margin-top: 20px;
-            color: #333;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        input[type="text"], textarea, select {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
-    <h1>Hexatronic Support Form</h1>
-    <div class="container">
-        <form action="https://srmtechnologiess--practice.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DHz0000003dKn" method="POST">
-            <input type=hidden name="orgid" value="00DHz0000003dKn">
-            <input type=hidden name="retURL" value="http://file:///C:/Users/sitharthan.velayutha/Desktop/Web%20to%20Case/thankspage.html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web To Lead</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Enrollment Form</h1>
+    <form
+      action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdM000003EfXu"
+      method="POST"
+    >
+      <input type="hidden" name="oid" value="00DdM000003EfXu" />
+      <input
+        type="hidden"
+        name="retURL"
+        value="https://sidbala4023.github.io/Web-to-Lead-Mini-Project/thanks.html"
+      />  https://sidbala4023.github.io/Web-to-Lead-Mini-Project/thanks.html
 
-            <!-- Uncomment for debugging -->
-            <!-- <input type="hidden" name="debug" value=1> -->
-            <!-- <input type="hidden" name="debugEmail" value="sitharthan.velayutham@srmtech.com"> -->
+      <label for="first_name">First Name</label
+      ><input
+        id="first_name"
+        maxlength="40"
+        name="first_name"
+        size="20"
+        type="text"
+        required="true"
+      /><br />
 
-            <label for="name">Contact Name</label>
-            <input id="name" maxlength="80" name="name" size="20" type="text" />
+      <label for="last_name">Last Name</label
+      ><input
+        id="last_name"
+        maxlength="80"
+        name="last_name"
+        size="20"
+        type="text"
+        required="true"
+      /><br />
 
-            <label for="email">Email</label>
-            <input id="email" maxlength="80" name="email" size="20" type="text" />
+      <label for="email">Email</label
+      ><input
+        id="email"
+        maxlength="80"
+        name="email"
+        size="20"
+        type="text"
+        required="true"
+      /><br />
 
-            <label for="phone">Phone</label>
-            <input id="phone" maxlength="40" name="phone" size="20" type="text" />
+      <label for="phone">Phone</label
+      ><input
+        id="phone"
+        maxlength="10"
+        name="phone"
+        size="20"
+        type="phone"
+        required="true"
+      /><br />
 
-            <label for="subject">Subject</label>
-            <input id="subject" maxlength="80" name="subject" size="20" type="text" />
+      <input type="hidden" id="lead_source" name="lead_source" value="Web" />
+      <input type="hidden" id="company" name="company" value="iLearnings" />
 
-            <label for="description">Description</label>
-            <textarea name="description"></textarea>
-
-            <label for="reason">Case Reason</label>
-            <select id="reason" name="reason">
-                <option value="">--None--</option>
-                <option value="User didn't attend training">User didn't attend training</option>
-                <option value="Complex functionality">Complex functionality</option>
-                <option value="Existing problem">Existing problem</option>
-                <option value="Instructions not clear">Instructions not clear</option>
-                <option value="New problem">New problem</option>
-            </select>
-
-            <input type="submit" name="submit" value="Submit">
-        </form>
-    </div>
-</body>
+      <input type="submit" name="submit" class="submit" />
+    </form>
+  </body>
 </html>
